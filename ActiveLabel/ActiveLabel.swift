@@ -471,25 +471,21 @@ typealias ElementTuple = (range: NSRange, element: ActiveElement, type: ActiveTy
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         if onTouch(touch) { return }
-        super.touchesBegan(touches, with: event)
     }
     
     open override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         if onTouch(touch) { return }
-        super.touchesMoved(touches, with: event)
     }
     
     open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         _ = onTouch(touch)
-        super.touchesCancelled(touches, with: event)
     }
     
     open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         if onTouch(touch) { return }
-        super.touchesEnded(touches, with: event)
     }
     
     //MARK: - ActiveLabel handler
